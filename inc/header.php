@@ -4,8 +4,16 @@
     include 'lib/session.php';
     Session::init();
 ?>
-<?php	
+<?php
+    function auto_version($file) {
+        if(strpos($file, '/') !== 0 || !file_exists($_SERVER['DOCUMENT_ROOT'] . $file))
+            return $file;
 
+        $mtime = filemtime($_SERVER['DOCUMENT_ROOT'] . $file);
+        return preg_replace('{\\.([^./]+)$}', ".$mtime.\$1", $file);
+    }
+?>
+<?php	
 	include 'lib/database.php';
 	include 'helpers/format.php';
 	spl_autoload_register(function($class){
@@ -30,8 +38,9 @@
 <title>Store Website</title>
 <meta http-equiv="Content-Type" content="text/php; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-<link href="css/menu.css" rel="stylesheet" type="text/css" media="all"/>
+
+<link href="<?php echo auto_version('css/style.css'); ?>" rel="stylesheet" type="text/css" media="all"/>
+<link href="<?php echo auto_version('css/menu.css'); ?>" rel="stylesheet" type="text/css" media="all"/>
 <script src="js/jquerymain.js"></script>
 <script src="js/script.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script> 
@@ -40,10 +49,11 @@
 <script type="text/javascript" src="js/easing.js"></script> 
 <script type="text/javascript" src="js/nav-hover.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
+
 <link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
-<link href="admin/css/background.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="fontawesome/css/all.css">
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="<?php echo auto_version('fontawesome/css/all.css'); ?>">
+<link href="<?php echo auto_version('admin/css/background.css'); ?>" rel="stylesheet" type="text/css" media="all"/>
+<link rel="stylesheet" href="<?php echo auto_version('bootstrap/css/bootstrap.min.css'); ?>">
 <script type="text/javascript">
   $(document).ready(function($){
     $('#dc_mega-menu-orange').dcMegaMenu({rowItems:'4',speed:'fast',effect:'fade'});
