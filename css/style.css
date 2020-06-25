@@ -951,6 +951,7 @@ header_bottom_right_images1 {
 
 .images_1_of_4 {
     width: 20.8%;
+    height: 50%;
     padding: 1.5%;
     text-align: center;
     position: relative;
@@ -958,6 +959,7 @@ header_bottom_right_images1 {
 
 .images_1_of_4 img {
     max-width: 100%;
+    max-height: 50%;
 }
 
 .discount {
