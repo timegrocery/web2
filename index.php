@@ -1,6 +1,8 @@
+
 <?php 
 	include 'inc/header.php';
 	include 'inc/slider.php';
+	// asdasdasdass
 ?>	
 <div class="main">
     <div class="content">
