@@ -63,7 +63,7 @@
 			    	?>
 						<table class="tblone">
 							<tr>
-								<th width="5%">Stt</th>
+								<th width="5%">STT</th>
 								<th width="15%">Tên sản phẩm</th>
 								<th width="15%">Giá</th>
 								<th width="25%">Số lượng</th>

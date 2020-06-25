@@ -84,7 +84,7 @@
 						if($login_check){
 							echo '<input type="submit" class="buysubmit" name="compare" value="So sánh sản phẩm"/>'.'  ';
 							
-						}else{
+						} else {
 							echo '';
 						}
 							
