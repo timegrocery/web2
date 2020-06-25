@@ -95,13 +95,18 @@ if(isset($_POST['login']))
         <span id="error" style="background-color: red;"></span>
         <div class="txtb">
             <h5 id="emailid">Email:</h5>
-            <input type="email" name="email" required placeholder="nhập email..."/>
+            <input type="email" name="email" required placeholder="Nhập email của bạn"/>
         </div>
         <div class="txtb">
             <h5 id="pwd1">Mật khẩu:</h5>
-            <input type="pwd" name="pwd" required placeholder="nhập mật khẩu..."/>
+            <input type="password" name="pwd" required placeholder="Nhập mật khẩu" id="passwordField"/>
+            
+        </div>
+        <div class="togglePassword";align="right";>
+            <input type="checkbox" onclick="togglePasswordVisibility()">Hiện mật khẩu
         </div>
         <p>
+            </br>
             <input type="checkbox" id="checkbox" /><span>Nhớ tài khoản</span>
             <span class="forgot"><a href="" onClick="forgotPass(); return false" id="tag">Quên mật khẩu?</a></span>
         </p>
@@ -122,5 +127,15 @@ if(isset($_POST['login']))
     <script src="assets/js/core/jquery.min.js"></script>
     <script src="assets/js/core/popper.min.js"></script>
     <script src="assets/js/core/bootstrap-material-design.min.js"></script>
+    <script>
+    function togglePasswordVisibility() {
+        var x = document.getElementById("passwordField");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
 </body>
 </html>
