@@ -113,11 +113,11 @@ if(isset($_SESSION['email'])){
 		<li><a href="index.php">Trang chủ</a></li>
 		<li><a href="products.php" data-toggle="dropdown">Sản phẩm<i class="fas fa-caret-down"></i></a>
 		    <ul class="dropdown-menu">
-				<li><a href="kinhte.html">Thẻ nhớ</a></li>
-				<li><a href="giaoduc.html">Bao da-ốp lưng</a></li>
-				<li><a href="vanhoc.html">Miếng dán cường lực</a></li>
-				<li><a href="thieunhi.html">Tai nghe</a></li>
-				<li><a href="truyentranh.html">Pin dự phòng</a></li>
+				<li><a href="productbycat.php?catid=1">Thẻ nhớ</a></li>
+				<li><a href="productbycat.php?catid=2">Bao da-ốp lưng</a></li>
+				<li><a href="productbycat.php?catid=6">Miếng dán cường lực</a></li>
+				<li><a href="productbycat.php?catid=16">Tai nghe</a></li>
+				<li><a href="productbycat.php?catid=7">Pin dự phòng</a></li>
 			</ul>
 		</li>
 		
