@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link href="admin/css/background.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <script type="text/javascript" src="js/hiddenpass.js"></script> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>Đăng nhập </title>
 	<link href="css/login.css" rel="stylesheet" type="text/css" media="all"/>
@@ -100,6 +102,7 @@ if(isset($_POST['login']))
         <div class="txtb">
             <h5 id="pwd1">Mật khẩu:</h5>
             <input type="pwd" name="pwd" required placeholder="nhập mật khẩu..."/>
+            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
         </div>
         <p>
             <input type="checkbox" id="checkbox" /><span>Nhớ tài khoản</span>
@@ -119,6 +122,17 @@ if(isset($_POST['login']))
                 $(this).removeClass("focus");
         })
     </script>
+    <!-- <script>
+        $(".toggle-password").click(function() {
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+        input.attr("type", "text");
+        } else {
+        input.attr("type", "password");
+        }
+        });
+    </script> -->
     <script src="assets/js/core/jquery.min.js"></script>
     <script src="assets/js/core/popper.min.js"></script>
     <script src="assets/js/core/bootstrap-material-design.min.js"></script>
