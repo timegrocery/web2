@@ -9,8 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link href="admin/css/background.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-    <script type="text/javascript" src="js/hiddenpass.js"></script> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>Đăng nhập </title>
 	<link href="css/login.css" rel="stylesheet" type="text/css" media="all"/>
@@ -77,7 +75,6 @@ if(isset($_POST['login']))
             $_SESSION['email'] = $email;
             $_SESSION['id'] = $row['id'];  
             echo "
-
                         <script language='javascript'>
                             alert('Đăng nhập thành công');
                             window.open('index.php','_self', 1);
@@ -97,14 +94,18 @@ if(isset($_POST['login']))
         <span id="error" style="background-color: red;"></span>
         <div class="txtb">
             <h5 id="emailid">Email:</h5>
-            <input type="email" name="email" required placeholder="nhập email..."/>
+            <input type="email" name="email" required placeholder="Nhập email của bạn"/>
         </div>
         <div class="txtb">
             <h5 id="pwd1">Mật khẩu:</h5>
-            <input type="pwd" name="pwd" required placeholder="nhập mật khẩu..."/>
-            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+            <input type="password" name="pwd" required placeholder="Nhập mật khẩu" id="passwordField"/>
+            
+        </div>
+        <div class="togglePassword";align="right";>
+            <input type="checkbox" onclick="togglePasswordVisibility()">Hiện mật khẩu
         </div>
         <p>
+            </br>
             <input type="checkbox" id="checkbox" /><span>Nhớ tài khoản</span>
             <span class="forgot"><a href="" onClick="forgotPass(); return false" id="tag">Quên mật khẩu?</a></span>
         </p>
@@ -122,19 +123,18 @@ if(isset($_POST['login']))
                 $(this).removeClass("focus");
         })
     </script>
-    <!-- <script>
-        $(".toggle-password").click(function() {
-        $(this).toggleClass("fa-eye fa-eye-slash");
-        var input = $($(this).attr("toggle"));
-        if (input.attr("type") == "password") {
-        input.attr("type", "text");
-        } else {
-        input.attr("type", "password");
-        }
-        });
-    </script> -->
     <script src="assets/js/core/jquery.min.js"></script>
     <script src="assets/js/core/popper.min.js"></script>
     <script src="assets/js/core/bootstrap-material-design.min.js"></script>
+    <script>
+    function togglePasswordVisibility() {
+        var x = document.getElementById("passwordField");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
 </body>
 </html>

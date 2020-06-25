@@ -64,7 +64,7 @@
 					</td>		
 				<td>
 					
-					<a href="?slider_del=<?php echo $result_slider['sliderId'] ?>" onclick="return confirm('Are you sure to Delete!');" >Delete</a> 
+					<a href="?slider_del=<?php echo $result_slider['sliderId'] ?>" onclick="return confirm('Are you sure to Delete!');" ><img src='img/delete.png' title='Xóa' class='delete'></a> 
 				</td>
 					</tr>
 				<?php

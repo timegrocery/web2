@@ -42,14 +42,10 @@
 				
 				$pdlist = $pd->show_product();
 				$i = 0;
-				
-				
 					if($pdlist){
 					
 							while ($result = $pdlist->fetch_assoc()){
-								$i++;
-									
-									
+								$i++;														
 				 ?>
 				<tr class="odd gradeX">
 					<td><?php echo $i ?></td>
@@ -72,7 +68,7 @@
 					<td><img src="uploads/<?php echo $result['image'] ?>" width="80"></td>
 					<td><?php echo $result['catName'] ?></td>
 					<td><?php echo $result['brandName'] ?></td>
-					<td><a href="productedit.php?productid=<?php echo $result['productId'] ?>">Edit</a> || <a href="?productid=<?php echo $result['productId'] ?>">Delete</a></td>
+					<td><a href="productedit.php?productid=<?php echo $result['productId'] ?>"><img src="img/edit.png" title="Sửa"></a><a href="?productid=<?php echo $result['productId'] ?>"><img src='img/delete.png' title='Xóa' class='delete'></a></td>
 				</tr>
 				<?php
 							
