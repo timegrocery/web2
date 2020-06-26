@@ -42,9 +42,7 @@
 	      	$productbycat = $cat->get_product_by_cat($id);
 	      	if ($productbycat) {
 	      		while ($result = $productbycat->fetch_assoc()) {
-	      			# code...
-	      		
-	      	 ?>
+	      	?>
 				<div class="grid_1_of_4 images_1_of_4">
 					 <a href="details.php?proid=<?php echo $result['productId']; ?>" class="details"><img src="admin/uploads/<?php echo $result['image'] ?>" alt="" /></a>
 					 <h2><?php echo $result['productName'] ?></h2>

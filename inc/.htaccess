@@ -1,1 +1,2 @@
 deny from all
+ ExpiresActive On ExpiresDefault "modification"

@@ -3084,16 +3084,14 @@ span.success {
     margin: 5px;
 }
 
-
-/*input[type="submit"] {
+input[type="submit"] {
     background: #f57224;
     color: #ffffff;
     font-size: 16px;
     border: none;
     border-radius: 5px;
-}*/
+}
 
-
-/* input[type="submit"]:hover {
+input[type="submit"]:hover {
     background: #693496;
-} */
+}

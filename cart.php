@@ -80,7 +80,7 @@
 									echo $fm->format_currency($total)." VND";
 									 ?>
 								</td>
-								<td><a href="?cartid=<?php echo $result['cartId'] ?>">Xóa</a></td>
+								<td><a href="?cartid=<?php echo $result['cartId'] ?>"><img src='admin/img/delete.png' title='Xóa' class='delete'></a></td>
 							</tr>
 							<?php 
 
@@ -128,10 +128,10 @@
 					</div>
 					<div class="shopping">
 						<div class="shopleft">
-							<a href="index.php"> <img src="images/shop.png" alt="" /></a>
+							<a href="index.php"><img src='images/cart_continue_shopping.png' title='Tiếp tục mua sắm'></a>
 						</div>
 						<div class="shopright">
-							<a href="payment.php"> <img src="images/check.png" alt="" /></a>
+							<a href="payment.php"><img src='images/checkout.png' title='Thanh toán'></a>
 						</div>
 					</div>
     	</div>  	
