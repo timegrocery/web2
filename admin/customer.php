@@ -67,13 +67,6 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Zipcode</td>
-                            <td>:</td>
-                            <td>
-                                <input type="text" readonly="readonly" value="<?php echo $result['zipcode']; ?>" name="catName" class="medium" />
-                            </td>
-                        </tr>
-                        <tr>
                             <td>Email</td>
                             <td>:</td>
                             <td>

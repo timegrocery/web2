@@ -40,7 +40,7 @@
     <div class="content">
     	<div class="section group">
     		<div class="heading">
-    		     <h3>Thanh toán offline</h3>
+    		     <h3>Thanh toán Tiền Mặt</h3>
     		</div>
     		<div class="clear"></div>
     		<div class="box_left">
@@ -121,15 +121,15 @@
 								?>
 								</td>
 							</tr>
-							<tr>
+							<!-- <tr>
 								<th>Thuế : </th>
-								<td>10% (<?php echo $vat = $subtotal * 0.1. ' VND';?>)</td>
+								<td>10% (<?php echo $vat = $subtotal * 0.1. ' VND';?>)</td> -->
 							</tr>
 							<tr>
 								<th>Tổng cộng :</th>
 								<td><?php 
-								$vat = $subtotal * 0.1;
-								$grandTotal = $subtotal + $vat;
+								// $vat = $subtotal * 0.1;
+								$grandTotal = $subtotal;
 								echo $grandTotal.' VND';
 								 ?> </td>
 							</tr>
