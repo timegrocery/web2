@@ -3,7 +3,7 @@ unset($_SESSION['email']);
 unset($_SESSION['id']);
 echo "
 		<script language='javascript'>
-			alert('Thoát thành công');
+			alert('Đăng xuất thành công');
 			window.open('index.php','_self', 1);
 		</script>
 	";
