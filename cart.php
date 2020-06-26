@@ -128,7 +128,7 @@
 					</div>
 					<div class="shopping">
 						<div class="shopleft">
-							<a href="index.php"><img src='images/cart_continue_shopping.png' title='Tiếp tục mua sắm'></a>
+							<a href="index.php"><img src='images/shopping.png' title='Tiếp tục mua sắm'></a>
 						</div>
 						<div class="shopright">
 							<a href="payment.php"><img src='images/checkout.png' title='Thanh toán'></a>
