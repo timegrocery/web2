@@ -12,7 +12,7 @@ echo "
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Loading</title>
+	<title>Đang tải</title>
 </head>
 <body>
 
