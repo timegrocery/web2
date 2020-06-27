@@ -3,26 +3,25 @@
 	// include 'inc/slider.php';
  ?>
 <?php
- //    if(isset($_GET['cartid'])){
- //        $cartid = $_GET['cartid']; 
- //        $delcart = $ct->del_product_cart($cartid);
- //    }
+    if(isset($_GET['cartid'])){
+        $cartid = $_GET['cartid']; 
+        $delcart = $ct->del_product_cart($cartid);
+    }
         
 	// if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
- //        // LẤY DỮ LIỆU TỪ PHƯƠNG THỨC Ở FORM POST
- //        $cartId = $_POST['cartId'];
- //        $quantity = $_POST['quantity'];
- //        $update_quantity_Cart = $ct -> update_quantity_Cart($cartId, $quantity); // hàm check catName khi submit lên
- //    	if ($quantity <= 0) {
- //    		$delcart = $ct->del_product_cart($cartId);
- //    	}
- //    } 
+    //     // LẤY DỮ LIỆU TỪ PHƯƠNG THỨC Ở FORM POST
+    //     $cartId = $_POST['cartId'];
+    //     $quantity = $_POST['quantity'];
+    //     $update_quantity_Cart = $ct -> update_quantity_Cart($cartId, $quantity); // hàm check catName khi submit lên
+    // 	if ($quantity <= 0) {
+    // 		$delcart = $ct->del_product_cart($cartId);
+    // 	}
+    // } 
  ?>
 <?php 
-	$login_check = Session::get('customer_login');
-	  if ($login_check==false) {
-	  	header('Location:login.php');
-	  }
+	if (!isset($_SESSION['email'])) {
+		header('Location:login.php');
+		}
  ?>
  <?php
 	if(isset($_GET['confirmid'])){
@@ -36,7 +35,7 @@
     <div class="content">
     	<div class="cartoption">		
 			<div class="cartpage">
-			    	<h2>Chi tiết của bạn đã đặt hàng</h2>
+			    	<h2>Chi tiết đơn hàng</h2>
 
 						<table class="tblone">
 							<tr>
@@ -112,10 +111,10 @@
 					</div>
 					<div class="shopping">
 						<div class="shopleft">
-							<a href="index.php"> <img src="images/shop.png" alt="" /></a>
+							<a href="index.php"><img src='images/shopping.png' title='Tiếp tục mua sắm'></a>
 						</div>
 						<div class="shopright">
-							<a href="payment.php"> <img src="images/check.png" alt="" /></a>
+							<a href="payment.php"><img src='images/checkout.png' title='Thanh toán'></a>
 						</div>
 					</div>
     	</div>  	

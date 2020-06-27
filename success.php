@@ -52,8 +52,8 @@
                 }
              ?>
             <p class="success_note">Tổng giá trị bạn đã mua: <?php 
-                $vat = $amount * 0.1;
-                $total = $vat + $amount;
+                // $vat = $amount * 0.1;
+                $total =  $amount;
                 echo $total.' VNĐ';
              ?></p>
             <p class="success_note">Chúng tôi sẽ liên hệ với bạn sớm nhất có thể, xem chi tiết đặt hàng tại <a href="orderdetails.php">Bấm vào đây</a></p>

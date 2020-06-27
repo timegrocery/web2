@@ -1,3 +1,4 @@
+<body class="background">
 <?php 
 	include 'inc/header.php';
 	// include 'inc/slider.php';
@@ -27,7 +28,9 @@
         $insertCart = $ct -> add_to_cart($id, $quantity); // hàm check catName khi submit lên
     }  
  ?>
- <div class="main">
+ 
+<link href="admin/css/background.css" rel="stylesheet" type="text/css" />
+<div class="main">
     <div class="content">
     	<div class="section group">
     		<?php 
@@ -46,12 +49,12 @@
 						<p>Giá: <span><?php echo $fm->format_currency($result_details['price'])." VND" ?></span></p>
 						<p>Danh mục: <span><?php echo $result_details['catName'] ?></span></p>
 						<p>Thương hiệu:<span><?php echo $result_details['brandName'] ?></span></p>
-						<p>Số lượng:</p>
+						
 					</div>
-				<div class="add-cart">
+					<div class="add-cart">
 					<form action="" method="post">
-						<input type="number" class="buyfield" name="quantity" value="1" min="1" >
-						<input type="submit" class="buysubmit" name="submit" value="Chọn mua"/>
+						<p>Số lượng:<input type="number" class="buyfield" name="quantity" value="1" min="1" >
+						<input type="submit" class="buysubmit" name="submit" value="Thêm vào giỏ hàng"/></p>
 					</form>
 						<?php 
 							if(isset($insertCompare)) {
@@ -84,7 +87,7 @@
 						if($login_check){
 							echo '<input type="submit" class="buysubmit" name="compare" value="So sánh sản phẩm"/>'.'  ';
 							
-						} else {
+						}else{
 							echo '';
 						}
 							
@@ -149,5 +152,6 @@
  	</div>
  </div>
 <?php 
-	include 'inc/footer.php';
+	// include 'inc/footer.php';
  ?>
+</body>

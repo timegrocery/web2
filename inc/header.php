@@ -70,7 +70,7 @@
 			    <div class="search_box">
 				    <form action= "search.php" method="post">
 						<input type="text" placeholder="Tìm kiếm sản phẩm" name="tukhoa">
-						<input type="submit" nmae="search_product" value="Tìm kiếm">
+						<input type="submit" name="search_product" value="Tìm kiếm">
 				    </form>
 			    </div>
 			    <div class="shopping_cart">
