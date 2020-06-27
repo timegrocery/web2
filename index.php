@@ -33,10 +33,11 @@
 			</div>
 			<div class="content_bottom">
     		<div class="heading">
+			<br/>
     		<h3>Sản phẩm mới</h3>
     		</div>
     		<div class="clear"></div>
-    	</div>
+    		</div>
 			<div class="section group">
 				<?php 
 				$product_new = $product->getproduct_new();

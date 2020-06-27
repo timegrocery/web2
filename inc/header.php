@@ -123,7 +123,7 @@ if(isset($_SESSION['email'])){
 		<li><a href="index.php">Trang chủ</a></li>
 		<li><a href="products.php" data-toggle="dropdown">Sản phẩm<i class="fas fa-caret-down"></i></a>
 		    <ul class="dropdown-menu">
-				<li><a href="productbycat.php?catid=1">Thẻ nhớ</a></li>
+				<li><a href="productbycat.php?catid=5">Cáp sạc</a></li>
 				<li><a href="productbycat.php?catid=2">Bao da-ốp lưng</a></li>
 				<li><a href="productbycat.php?catid=6">Miếng dán cường lực</a></li>
 				<li><a href="productbycat.php?catid=16">Tai nghe</a></li>
